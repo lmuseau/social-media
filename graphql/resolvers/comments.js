@@ -45,7 +45,7 @@ module.exports = {
         throw new UserInputError('Post not found')
       }
     },
-    async likePost(_, { postId }, context) {
+    async likeOrUnlikePost(_, { postId }, context) {
       const { username } = checkAuth(context);
 
       const post = await Post.findById(postId);
