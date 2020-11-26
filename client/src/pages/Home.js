@@ -30,7 +30,7 @@ function Home() {
         {loading ? (
           <h1>Loading posts..</h1>
         ) : (
-          <Transition.Group animation='drop' duration='300'>
+          <Transition.Group animation='drop' duration='300' divided>
             {
               posts &&
               posts.map((post) => (
